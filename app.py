@@ -27,7 +27,9 @@ class BERT_Arch(nn.Module):
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 bert = BertModel.from_pretrained('bert-base-uncased')
 model = BERT_Arch(bert)
-model.load_state_dict(torch.load('model/fakenews_weights.pt', map_location=torch.device('cpu')))
+state_dict = torch.load('model/fakenews_weights.pt', map_location=torch.device('cpu'))
+model.load_state_dict(state_dict, strict=False)
+# model.load_state_dict(torch.load('model/fakenews_weights.pt', map_location=torch.device('cpu')))
 model.eval()
 
 # Init Flask
