@@ -1,0 +1,7 @@
+pycache/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+pycaret-env/
+*.log
+cashe/

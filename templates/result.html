@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Prediction Result</h1>
+    <p><strong>News:</strong></p>
+    <div class="news-box">{{ news }}</div>
+    <h2 class="{{ 'fake' if prediction == 'Fake News' else 'real' }}">Prediction: {{ prediction }}</h2>
+    <a href="/">🔙 Try another</a>
+  </div>
+</body>
+</html>
