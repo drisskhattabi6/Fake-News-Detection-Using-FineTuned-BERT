@@ -48,6 +48,31 @@ Each file includes the text of the news and associated metadata. The data is pre
 - **Optimizer:** `AdamW` with a learning rate of `1e-5`
 - **Output Classes:** `Real` or `Fake`
 
+
+-> Fine-tuning BERT model process :
+
+![Screenshot](imgs/process.png)
+
+---
+
+### 📈 Evaluation
+
+After fine-tuning the BERT model on the fake news dataset, the classifier achieved the following performance metrics on the test set:
+
+```
+              precision    recall  f1-score   support
+
+       Real       0.84      0.92      0.88      3213
+       Fake       0.92      0.84      0.88      3522
+
+    Accuracy                           0.88      6735
+   Macro avg       0.88      0.88      0.88      6735
+Weighted avg       0.88      0.88      0.88      6735
+```
+
+✅ **Overall Accuracy:** 88%
+📊 **Balanced Performance:** Both real and fake news are classified with high precision and recall, indicating that the model is not biased toward either class.
+
 ---
 
 ## 🚀 How to Use
@@ -71,10 +96,6 @@ python app.py
 
 Then open your browser and visit: [http://localhost:5000](http://localhost:5000)
 
-![Screenshot](imgs/img1.png)
-
-![Screenshot](imgs/img2.png)
-
 ---
 
 ## 🖥️ Web Interface
@@ -82,6 +103,12 @@ Then open your browser and visit: [http://localhost:5000](http://localhost:5000)
 * Paste a news article into the form.
 * Click "Check".
 * The app will return a prediction: ✅ **Real News** or ❌ **Fake News**
+
+
+![Screenshot](imgs/img1.png)
+
+![Screenshot](imgs/img2.png)
+
 
 ---
 
